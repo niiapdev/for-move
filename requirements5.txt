@@ -1,0 +1,8 @@
+# TikTok Video Generator - Python Dependencies
+# This project uses only Python standard library + system FFmpeg/FFprobe
+# No additional Python packages required.
+
+# If you want to add optional dependencies for enhanced features,
+# uncomment the lines below:
+# pillow>=10.0.0  # For additional image format support
+# tqdm>=4.65.0    # For progress bars

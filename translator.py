@@ -69,6 +69,7 @@ async def transcribe_video(
             language=language,
             task=task,
             word_timestamps=bool(config.WHISPER_WORD_TIMESTAMPS),
+            vad_filter=bool(config.WHISPER_VAD),
         )
         blocks = []
         for segment in segments:

@@ -6,6 +6,11 @@ __pycache__/
 video_for_whisper/
 video_subtitled/
 jobs.sqlite3
+local_out/
+local_stage/
+local_videos/
+tik_tok-scripts/
+
 
 # секреты
 .env

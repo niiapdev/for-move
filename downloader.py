@@ -57,18 +57,7 @@ async def download_video(
         try:
             status = data.get("status")
             if status == "downloading":
-                total = data.get("total_bytes") or data.get("total_bytes_estimate") or 0
-                downloaded = data.get("downloaded_bytes") or 0
-                if not total or downloaded <= 0:
-                    return
-                percent = downloaded * 100.0 / total
-                now = time.monotonic()
-                if percent < 100 and now - last_update["t"] < 3:
-                    return
-                last_update["t"] = now
-                asyncio.run_coroutine_threadsafe(
-                    progress_coro(f"⬇️ Скачивание... {percent:.0f}%"), loop
-                )
+                return
             elif status == "finished" and not last_update["finished"]:
                 last_update["finished"] = True
                 asyncio.run_coroutine_threadsafe(
